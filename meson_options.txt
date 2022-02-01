@@ -184,6 +184,7 @@ option('shout', type: 'feature', description: 'Shoutcast streaming support using
 option('snapcast', type: 'boolean', value: true, description: 'Snapcast output plugin')
 option('sndio', type: 'feature', description: 'sndio output plugin')
 option('solaris_output', type: 'feature', description: 'Solaris /dev/audio support')
+option('visualization', type: 'boolean', value: true, description: 'Visualization output plugin')
 
 #
 # Misc libraries

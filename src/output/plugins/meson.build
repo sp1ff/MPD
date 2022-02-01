@@ -165,6 +165,18 @@ else
   wasapi_dep = dependency('', required: false)
 endif
 
+output_features.set('ENABLE_VISUALIZATION_OUTPUT', get_option('visualization'))
+if get_option('visualization')
+  output_plugins_sources += [
+    'visualization/VisualizationOutputPlugin.cxx',
+    'visualization/VisualizationServer.cxx',
+    'visualization/Visualization.cxx',
+    'visualization/VisualizationClient.cxx',
+  ]
+  output_plugins_deps += [ event_dep, net_dep ]
+endif
+
+
 output_plugins = static_library(
   'output_plugins',
   output_plugins_sources,
